@@ -13,10 +13,6 @@ width = 7
 area = depth * width
 print(area)
 
-input("Ympyrän säde on?:")
-area = säde *
-
-
 # Tyyppimuutokset
 age_input = input("kuinka vanha olet?")
 age_int = int(age_input) # 13
@@ -28,9 +24,3 @@ print(f"vuoden päästä olen {new_age} vuotta.")
 #boolean: totta vai tarua (pythonissa 1 tai 0)
 isItTrue = True
 print(isItTrue)
-
-
-
-
-
-
