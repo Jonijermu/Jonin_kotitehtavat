@@ -1,4 +1,5 @@
+import math
 säde_str = input("Pallon säde: ")
 säde = float(säde_str)
-area = säde * säde *3.145
+area = str(säde * säde * math.pi)
 print("ympyrän pinta-ala on " + str(area))
