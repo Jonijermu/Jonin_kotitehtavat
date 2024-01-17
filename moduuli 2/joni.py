@@ -13,6 +13,10 @@ width = 7
 area = depth * width
 print(area)
 
+input("Ympyrän säde on?:")
+area = säde *
+
+
 # Tyyppimuutokset
 age_input = input("kuinka vanha olet?")
 age_int = int(age_input) # 13
