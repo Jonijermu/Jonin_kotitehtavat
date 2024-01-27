@@ -1,27 +1,19 @@
-def main():
-    numerot = []
+import random
 
-    while True:
-        syote = input("Syötä luku (tyhjä merkkijono lopettaa): ")
+arvattava_luku = random.randint(1, 10)
+tries = 0
 
-        # Tarkista, onko käyttäjä syöttänyt tyhjän merkkijonon
-        if syote == "":
-            break
-
-        try:
-            luku = float(syote)
-            numerot.append(luku)
-        except ValueError:
-            print("Virhe: Syötteen tulee olla luku.")
-
-    if numerot:
-        # Tulosta pienin ja suurin luku
-        pienin = min(numerot)
-        suurin = max(numerot)
-        print(f"Pienin luku: {pienin}")
-        print(f"Suurin luku: {suurin}")
+while True:
+    arvaus = input("Anna luku väliltä 1-10: ")
+    arvaus = int(arvaus)
+    tries += 1
+    if tries == 5:
+        break
+    if arvaus < arvattava_luku:
+        print("Liian pieni arvaus.")
+    elif arvaus > arvattava_luku:
+        print("Liian suuri arvaus.")
     else:
-        print("Et syöttänyt yhtään lukua.")
-
-if __name__ == "__main__":
-    main()
+        print("Oikein! Arvattu luku oli", arvattava_luku)
+        print("Tarvitsit", tries, "arvauskertaa.")
+        break
