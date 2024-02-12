@@ -9,8 +9,8 @@ connection = mysql.connector.connect(
     autocommit=True
 )
 
-def hae_lentokenttä(icao):
-    sql = f"SELECT ident, name, iso_country FROM airport WHERE ident ='{icao}'"
+def mika_maa(maa_tunnus):
+    sql = f"SELECT iso_country, type FROM airport WHERE iso_country ='{maa_tunnus}'"
     cursor = connection.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
@@ -18,8 +18,5 @@ def hae_lentokenttä(icao):
         for rivi in result:
           print(f'Lentokenttä on {rivi} ')
 
-icao = input('Anna lentokentän ICAO-koodi: ')
-hae_lentokenttä(icao)
-
-
-
+maa_tunnus = input('Anna Maatunnus: ')
+mika_maa(maa_tunnus)
