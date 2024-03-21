@@ -31,4 +31,4 @@ c1.accelerate(50)
 print(f'Rekisteri tunnus: {c1.license}, huppunopeus: {c1.top_speed}km/h, tämän hetkinen nopeus: {c1.current_speed}kmh/, kuljettu matka: {c1.travel_distance}km')
 
 c1.accelerate(-200)
-print(f'{c1.current_speed}')
+print(f'Nopeus tällä hetkellä: {c1.current_speed}km/h')
