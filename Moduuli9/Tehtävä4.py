@@ -32,9 +32,7 @@ while the_race:
     for car in cars:
         accelerate = random.randint(-10, 15)
         car.accelerate(accelerate)
-
         car.distance(1)
-
         if car.travel_distance >= 10000:
             the_race = False
             break
