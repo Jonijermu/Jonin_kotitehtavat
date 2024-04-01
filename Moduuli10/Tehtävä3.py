@@ -39,10 +39,17 @@ class Talo:
         else:
             print('Hissiä ei ole')
 
+    def fire_alarm(self):
+        for i, hissi in enumerate(self.hissit):
+            self.aja_hissiä(i +1, self.alinkerros)
 
-talo1 = Talo(0, 10, 3)
+
+talo1 = Talo(1, 10, 3)
+
 talo1.aja_hissiä(2, 10)
 talo1.aja_hissiä(1, 5)
+
+talo1.fire_alarm()
 
 
 

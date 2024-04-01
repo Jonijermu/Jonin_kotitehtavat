@@ -15,7 +15,7 @@ def search_shows(search_term):
                 genres = ""
                 for genre in show['show']['genres']:
                     genres = genres + genre
-                    print(f'{show['show']['name']} {genres}: {show['show']['url']} ')
+                    print(f'{show["show"]["name"]} {genres}: {show["show"]["url"]} ')
     except requests.exceptions.RequestException as error:
         print('HTTP -pyyntö meni pieleen. ei verkkoyhteyttä palvelimeen')
         print(error)
