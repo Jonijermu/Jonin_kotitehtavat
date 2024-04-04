@@ -20,16 +20,20 @@ def onko_alkuluku(luku):
 
 @app.route('/alkuluku/<luku>')
 def main(luku):
-    if tilakoodi == 200:
-        luku = int(luku)
-        if onko_alkuluku(luku):
-            vastaus = {
-                "Numero": luku,
-                "Alkuluku": True
+    luku = int(luku)
+    if onko_alkuluku(luku):
+        vastaus = {
+            "Numero": luku,
+            "Alkuluku": True
             }
+    else:
+        vastaus = {
+            "Numero": luku,
+            "alkuluku": False
+        }
             
     json_data = json.dumps(vastaus)
-    return Response(response=json_data, status=tilakoodi, mimetype='application/json')
+    return Response(response=json_data, mimetype='application/json')
 
 
 if __name__ == "__main__":
